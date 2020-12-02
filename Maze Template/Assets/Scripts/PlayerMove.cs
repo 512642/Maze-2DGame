@@ -6,8 +6,6 @@ public class PlayerMove : MonoBehaviour
 {
    public float xSpeed = 3.0f;
    public float ySpeed = 3.0f;
-   Rigidbody2D rb;
-   public 
    
 
     // Update is called once per frame
@@ -41,7 +39,7 @@ public class PlayerMove : MonoBehaviour
         Debug.Log("collided with " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Walls")
         {
-            return gameObject.transform.position = spawn;
+        
         }
     }
     
