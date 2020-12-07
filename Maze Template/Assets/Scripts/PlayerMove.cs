@@ -6,7 +6,7 @@ public class PlayerMove : MonoBehaviour
 {
    public float xSpeed = 3.0f;
    public float ySpeed = 3.0f;
-   
+   public float LifeCounter = 3.0f;
 
     // Update is called once per frame
     void Update()
@@ -32,16 +32,23 @@ public class PlayerMove : MonoBehaviour
            
     }
 
-    
-    void OnCollisionEnter2D(Collision2D collision)
+     public float LifeCounter = 3.0f;
+    void OnCollisionEnter2D(Collision2D col)
     {
 
-        Debug.Log("collided with " + collision.gameObject.tag);
-        if (collision.gameObject.tag == "Walls")
+        Debug.Log("collided with " + col.gameObject.tag);
+        if (col.gameObject.tag == "Walls")
         {
         
         }
     }
-    
+    void Lives()
+    {
+        if (Col.gameObject.tag == "walls")
+        {
+            LifeCounter = LifeCounter--;
+            Debug.log(LifeCounter);
+        }
+    }
 }
 
