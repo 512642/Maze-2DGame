@@ -46,7 +46,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (Col.gameObject.tag == "walls")
         {
-            LifeCounter = LifeCounter--;
+            LifeCounter--;
             Debug.log(LifeCounter);
         }
     }
